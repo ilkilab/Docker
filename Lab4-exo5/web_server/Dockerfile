@@ -1,11 +1,16 @@
 FROM nginx:latest
 
 # Make sure we are fully up to date
-RUN apt-get update -q && \		# Update our repo infos
-    apt-get dist-upgrade -y && \		# Upgrade packages 
-    apt-get install openssl && \		# Install openssl
-    apt-get clean && \			# Remove cached package files
-    apt-get autoclean			# Remove any packages that are no longer needed
+RUN apt-get update -q && \		
+# Update our repo infos
+    apt-get dist-upgrade -y && \		
+# Upgrade packages 
+    apt-get install openssl && \		
+# Install openssl
+    apt-get clean && \			
+# Remove cached package files
+    apt-get autoclean			
+# Remove any packages that are no longer needed
 
 EXPOSE 80		# Expose the container’s port 
 
